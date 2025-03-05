@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     summaryResult.textContent = `Your score: ${score} / ${totalQuestions}`;
     restartButton.addEventListener('click', () => {
-        window.location.href = './../../../index.html';
+        window.location.href = '../../../index.html';
     });
 });
