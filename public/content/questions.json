@@ -1,0 +1,202 @@
+[
+    {
+        "category": "JavaScript Basics",
+        "questions": [
+            {
+                "question": "Output ของ > console.log(typeof NaN); คือข้อใดต่อไปนี้?",
+                "options": [
+                    "number",
+                    "NaN",
+                    "undefined"
+                ],
+                "answer": "number"
+            },
+            {
+                "question": "Data type ข้อใดต่อไปนี้ถือว่าเป็น primitive ในภาษา JavaScript?",
+                "options": [
+                    "Object",
+                    "Array",
+                    "String"
+                ],
+                "answer": "String"
+            },
+            {
+                "question": "เครื่องหมาย === ใช้ทำอะไรในภาษา JavaScript?",
+                "options": [
+                    "เปรียบเทียบ values เท่านั้น",
+                    "เปรียบเทียบ values และ types",
+                    "กำหนดค่า value"
+                ],
+                "answer": "เปรียบเทียบ values และ types"
+            },
+            {
+                "question": "ข้อใดต่อไปนี้ ใช้ประกาศ variable ในภาษา JavaScript?",
+                "options": [
+                    "var",
+                    "let",
+                    "ใช้ได้ทั้ง var and let"
+                ],
+                "answer": "ใช้ได้ทั้ง var and let"
+            },
+            {
+                "question": "ในภาษา JavaScript 2 + '2' ได้ผลลัพธ์คือ?",
+                "options": [
+                    "4",
+                    "'22'",
+                    "NaN"
+                ],
+                "answer": "'22'"
+            }
+        ]
+    },
+    {
+        "category": "Functions and Scope",
+        "questions": [
+            {
+                "question": "ตามหลักภาษา JavaScript ข้อใดต่อไปนี้คือการกำหนด Arrow Function ที่ถูกต้อง?",
+                "options": [
+                    "cosnt functionA = () -> {};",
+                    "cosnt functionB = () => {};",
+                    "cosnt functionC = [] => {};"
+                ],
+                "answer": "cosnt functionB = () => {};"
+            },
+            {
+                "question": "ข้อใดคือการ define ฟังก์ชั่นที่ถูกต้องใน JavaScript?",
+                "options": [
+                    "function myFunction() {}",
+                    "def myFunction() {}",
+                    "function: myFunction() {}"
+                ],
+                "answer": "function myFunction() {}"
+            },
+            {
+                "question": "Variable ที่ถูกประกาศด้วย let ภายใน function body จัดว่ามี scope แบบใด?",
+                "options": [
+                    "Global",
+                    "Function",
+                    "Block"
+                ],
+                "answer": "Block"
+            },
+            {
+                "question": "หากไม่มีการกำหนดค่า default แบบ explicit ที่ function ส่งคืน ใน JavaScript กำหนดว่าฟังก์ชั่นคือค่าใด?",
+                "options": [
+                    "null",
+                    "undefined",
+                    "0"
+                ],
+                "answer": "undefined"
+            },
+            {
+                "question": "Keyword ใดต่อไปนี้ในฟังก์ชั่น ใช้สำหรับส่งคืนค่า?",
+                "options": [
+                    "return",
+                    "callback",
+                    "await"
+                ],
+                "answer": "return"
+            }
+        ]
+    },
+    {
+        "category": "DOM Manipulation",
+        "questions": [
+            {
+                "question": "Method ใดใช้เลือก HTML element ด้วย id?",
+                "options": [
+                    "getElementById()",
+                    "querySelector()",
+                    "getElementsByClassName()"
+                ],
+                "answer": "getElementById()"
+            },
+            {
+                "question": "Method ใดใช้สำหรับเพิ่ม element ใหม่เข้าไปใน DOM?",
+                "options": [
+                    "createElement()",
+                    "appendChild()",
+                    "ถูกทั้ง createElement() และ appendChild()"
+                ],
+                "answer": "ถูกทั้ง createElement() และ appendChild()"
+            },
+            {
+                "question": "ค่าอะไรถูกส่งกลับมาจาก document.querySelectorAll('.class')?",
+                "options": [
+                    "A single element",
+                    "A NodeList of elements",
+                    "An array of elements"
+                ],
+                "answer": "A NodeList of elements"
+            },
+            {
+                "question": "เราจะลบ element ออกจาก DOM ได้โดยใช้?",
+                "options": [
+                    "removeChild()",
+                    "remove()",
+                    "ใช้ได้ทั้ง removeChild() และ remove()"
+                ],
+                "answer": "Both removeChild() and remove()"
+            },
+            {
+                "question": "ข้อใดต่อไปนี้คือ event ที่จะทำงานเมื่อผู้ใช้คลิ๊ก element?",
+                "options": [
+                    "onmouseover",
+                    "onclick",
+                    "onchange"
+                ],
+                "answer": "onclick"
+            }
+        ]
+    },
+    {
+        "category": "ES6+ Features",
+        "questions": [
+            {
+                "question": "การประกาศ variable ด้วย `let` keyword จะถือว่า variable นั้นเป็น?",
+                "options": [
+                    "block-scoped",
+                    "global",
+                    "constant"
+                ],
+                "answer": "block-scoped"
+            },
+            {
+                "question": "Template literal ใน JavaScript ครอบโดยเครื่องหมายใด?",
+                "options": [
+                    "Single quotes",
+                    "Double quotes",
+                    "Backticks"
+                ],
+                "answer": "Backticks"
+            },
+            {
+                "question": "ข้อใดคือผลลัพธ์ของ `[1, 2, 3].map(x => x * 2);`?",
+                "options": [
+                    "[2, 4, 6]",
+                    "[1, 2, 3]",
+                    "[1, 4, 9]"
+                ],
+                "answer": "[2, 4, 6]"
+            },
+            {
+                "question": "หากต้องการกำหนด default parameter ให้กับ function ต้องเขียนอย่างไร?",
+                "options": [
+                    "function(x = 10) {}",
+                    "function(x: 10) {}",
+                    "function(x) { x = 10; }"
+                ],
+                "answer": "function(x = 10) {}"
+            },
+            {
+                "question": "เครื่องหมาย `...` ในภาษา JavaScript เรียกว่าอะไร?",
+                "options": [
+                    "Spread syntax",
+                    "Rest parameters",
+                    "ถูกทั้งสองอย่าง"
+                ],
+                "answer": "ถูกทั้งสองอย่าง"
+            }
+        ]
+    }
+]
