@@ -116,9 +116,9 @@
                 "options": [
                     "createElement()",
                     "appendChild()",
-                    "ถูกทั้ง createElement() และ appendChild()"
+                    "ถูกทั้งสองอย่าง"
                 ],
-                "answer": "ถูกทั้ง createElement() และ appendChild()"
+                "answer": "ถูกทั้งสองอย่าง"
             },
             {
                 "question": "ค่าอะไรถูกส่งกลับมาจาก document.querySelectorAll('.class')?",
@@ -134,9 +134,9 @@
                 "options": [
                     "removeChild()",
                     "remove()",
-                    "ใช้ได้ทั้ง removeChild() และ remove()"
+                    "ใช้ได้ทั้งคู่"
                 ],
-                "answer": "Both removeChild() and remove()"
+                "answer": "ใช้ได้ทั้งคู่"
             },
             {
                 "question": "ข้อใดต่อไปนี้คือ event ที่จะทำงานเมื่อผู้ใช้คลิ๊ก element?",
