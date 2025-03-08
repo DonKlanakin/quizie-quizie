@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="card"></div>
+    <div id="card-level"></div>
     <div id="quiz-container">
         <h1 class="mt-s">Quizie Quizie</h1>
         <div id="quizie-sub-header"></div>
@@ -21,7 +21,10 @@
             <div id="question"></div>
             <div id="options"></div>
         </div>
-        <button id="next-button" class="mt-s">Confirm</button>
+        <div class="buttons-container">
+            <button id="btn-auto-correct" class="mt-s">ขอโกงหน่อย</button>
+            <button id="btn-next" class="mt-s">ตอบอันนี้</button>
+        </div>
         <div id="result"></div>
     </div>
     <script src="./app.js"></script>

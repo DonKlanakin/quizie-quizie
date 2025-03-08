@@ -1,5 +1,8 @@
-body {
+* {
     font-family: noto sans thai, Arial, sans-serif;
+}
+
+body {
     background-color: #F1F0F4;
     display: flex;
     justify-content: center;
@@ -10,8 +13,8 @@ body {
 
 button {
     background-color: #007BFF;
-    color: #fff;
     border: none;
+    color: #fff;
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
@@ -29,6 +32,22 @@ button:active {
 h1 {
     color: #0056B3;
     margin-bottom: 8px;
+}
+
+#btn-auto-correct {
+    background-color: #0bc211;
+}
+
+#card-level {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    box-shadow: 0 0 10px rgba(8, 1, 21, 0.3);
+    width: 286px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
 }
 
 #quiz-container {
@@ -69,10 +88,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-#next-button {
-    align-self: flex-end;
-}
-
 #result {
     margin-top: 20px;
     font-size: 16px;
@@ -87,17 +102,8 @@ h1 {
     margin-bottom: 8px;
 }
 
-.card {
-    background-image:url("./public/images/card-caterpillar.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    box-shadow: 0 0 10px rgba(8, 1, 21, 0.3);
-    width: 286px;
-    height: 400px;
-    margin: 0;
-    padding: 0;
+.buttons-container {
+    align-self: flex-end;
 }
 
 .mt-m {
