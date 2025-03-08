@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 }
             });
+
             function showQuestion(question) {
                 questionElement.textContent = question.question;
                 optionsElement.innerHTML = '';
@@ -69,10 +70,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 level = 2;
             }
             const cardUri = data[level].uri;
+            localStorage.setItem("questionsCount", questionsCount);
+            localStorage.setItem("cardLevels", data.length);
+            localStorage.setItem("cardLevel", cardUri);
             getCard(cardUri);
+
             function getCard(uri) {
-                cardLevel.style.backgroundImage = `url(${uri})`;
+                cardLevel.style.backgroundImage = `url(./public/${uri})`;
             };
         });
-    }
+    };
 });

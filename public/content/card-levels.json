@@ -2,21 +2,21 @@
     {
         "id": "0",
         "level": "CARD_COMMON",
-        "uri": "./public/images/card-caterpillar.svg"
+        "uri": "images/card-caterpillar.svg"
     },
     {
         "id": "1",
         "level": "CARD_RARE",
-        "uri": "./public/images/card-cocoon.svg"
+        "uri": "images/card-cocoon.svg"
     },
     {
         "id": "2",
         "level": "CARD_ELITE",
-        "uri": "./public/images/card-magical-butterfly.svg"
+        "uri": "images/card-magical-butterfly.svg"
     },
     {
         "id": "3",
         "level": "CARD_LEGENDARY",
-        "uri": "./public/images/card-fairy-goddess.svg"
+        "uri": "images/card-fairy-goddess.svg"
     }
 ]
