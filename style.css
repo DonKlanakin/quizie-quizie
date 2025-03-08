@@ -11,6 +11,22 @@ body {
     margin: 0;
 }
 
+body::before {
+    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-fairy-goddess.svg");
+    position: absolute;
+    top: -9999rem;
+    left: -9999rem;
+    opacity: 0;
+}
+
+body::after {
+    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-cocoon.svg");
+    position: absolute;
+    top: -9999rem;
+    left: -9999rem;
+    opacity: 0;
+}
+
 button {
     background-color: #007BFF;
     border: none;
@@ -40,6 +56,15 @@ h4 {
 
 #btn-auto-correct {
     background-color: #0bc211;
+    transition: all 200ms;
+}
+
+#btn-auto-correct:hover {
+    background-color: #067109;
+}
+
+#btn-auto-correct:active {
+    background-color: #04182d;
 }
 
 #card-level {
@@ -52,6 +77,15 @@ h4 {
     height: 400px;
     margin: 0;
     padding: 0;
+    transition: all 200ms;
+}
+
+#card-level::before {
+    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-magical-butterfly.svg");
+    position: absolute;
+    top: -9999rem;
+    left: -9999rem;
+    opacity: 0;
 }
 
 #card-level-summary {
