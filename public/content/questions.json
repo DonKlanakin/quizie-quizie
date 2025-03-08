@@ -59,7 +59,7 @@
                     "const functionB = () => {};",
                     "const functionC = [] => {};"
                 ],
-                "answer": "cosnt functionB = () => {};"
+                "answer": "const functionB = () => {};"
             },
             {
                 "question": "ข้อใดคือการ define ฟังก์ชั่นที่ถูกต้องใน JavaScript?",
