@@ -80,7 +80,7 @@
                 "answer": "Block"
             },
             {
-                "question": "หากไม่มีการกำหนดค่า default แบบ explicit ที่ function ส่งคืน ใน JavaScript กำหนดว่าฟังก์ชั่นคือค่าใด?",
+                "question": "ใน JavaScript ถ้าหากว่าไม่ได้มีการกำหนดค่า default ของการคืนค่า แบบ explicit ฟังก์ชั่นจะส่งคืนค่าใด?",
                 "options": [
                     "null",
                     "undefined",
