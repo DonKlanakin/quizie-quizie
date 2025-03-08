@@ -93,6 +93,7 @@ h1 {
     background-size: cover;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+    box-shadow: 0 0 10px rgba(8, 1, 21, 0.3);
     width: 286px;
     height: 400px;
     margin: 0;
