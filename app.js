@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </label>
                     `;
                     optionsElement.appendChild(optionElement);
-                    quizieSubHeader.innerHTML = `${currentQuestionIndex + 1} of ${questions.length}`;
+                    quizieSubHeader.innerHTML = `คำถามที่ <b>${currentQuestionIndex + 1}</b> จาก <b>${questions.length}</b> คำถาม`;
                 });
             }
         });
