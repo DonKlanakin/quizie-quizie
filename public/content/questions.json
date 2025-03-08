@@ -55,9 +55,9 @@
             {
                 "question": "ตามหลักภาษา JavaScript ข้อใดต่อไปนี้คือการกำหนด Arrow Function ที่ถูกต้อง?",
                 "options": [
-                    "cosnt functionA = () -> {};",
-                    "cosnt functionB = () => {};",
-                    "cosnt functionC = [] => {};"
+                    "const functionA = () -> {};",
+                    "const functionB = () => {};",
+                    "const functionC = [] => {};"
                 ],
                 "answer": "cosnt functionB = () => {};"
             },
