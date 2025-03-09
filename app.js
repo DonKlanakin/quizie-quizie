@@ -1,10 +1,15 @@
 const cards = "./public/content/card-levels.json";
 const questions = "./public/content/questions-intermediate.json";
+const startScreen = document.getElementById("start-screen");
+const mainScreen = document.getElementById("main-screen");
 const quizieSubHeader = document.getElementById("quizie-sub-header");
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
 const nextButton = document.getElementById("btn-next");
 const autoCorrectButton = document.getElementById("btn-auto-correct");
+const cardBeginer = document.getElementById("card-beginer");
+const cardIntermediate = document.getElementById("card-intermediate");
+const cardExpert = document.getElementById("card-expert");
 const cardLevel = document.getElementById("card-level");
 const cardCommonCaterPillar = new Image();
 const cardRareCocoon = new Image();
@@ -65,6 +70,27 @@ async function preloadCards(uri) {
     );
 
     cardsCollection = cardImages;
+
+    cardBeginer.addEventListener("click", ()=> {
+        processTransition();
+    });
+
+    cardIntermediate.addEventListener("click", ()=> {
+        processTransition();
+    });
+
+    cardExpert.addEventListener("click", ()=> {
+        processTransition();
+    });
+
+    function processTransition() {
+        startScreen.style.display = "none";
+        mainScreen.style.display = "flex";
+        setTimeout(()=>{
+            mainScreen.style.opacity = "1";
+        }, 200);
+    }
+
   } catch (error) {
     console.error(`${logPrefix} :: ${error}`);
   }
