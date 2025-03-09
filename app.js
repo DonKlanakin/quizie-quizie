@@ -30,6 +30,39 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     })();
 
+    async function preloadCards(uri) {
+        const logPrefix = "preloadCards";
+        try {
+            let uriPrefix = "./public/";
+            let res = await fetch(uri);
+            let data = await res.json();
+
+            cardLevelsCount = data.length;
+            let cardImages = [
+                { card: cardCommonCaterPillar, uri: data[0].uri },
+                { card: cardRareCocoon, uri: data[1].uri },
+                { card: cardEliteMagicalButterfly, uri: data[2].uri },
+                { card: cardLegendaryFairyGoddess, uri: data[3].uri }
+            ];
+
+            await Promise.all(
+                cardImages.map(({ card, uri }) =>
+                    new Promise(resolve => {
+                        card.src = uriPrefix + uri;
+                        card.onload = () => resolve();
+                        card.onerror = () => resolve();
+                    })
+                ),
+
+            );
+
+            cardsCollection = cardImages;
+
+        } catch (error) {
+            console.error(`${logPrefix} :: ${error}`);
+        }
+    }
+
     async function loadQuestions() {
         const logPrefix = "loadQuestions";
         try {
@@ -71,28 +104,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    function showQuestion(question) {
-        const logPrefix = "showQuestion";
-        try {
-            questionElement.textContent = question.question;
-            optionsElement.innerHTML = '';
-            question.options.forEach(option => {
-                const optionElement = document.createElement("div");
-                optionElement.innerHTML = `
-                <label>
-                    <input type="radio" name="option" value="${option}">
-                    ${option}
-                </label>
-            `;
-                optionsElement.appendChild(optionElement);
-            });
-
-            quizieSubHeader.innerHTML = `คำถามที่ <b>${currentQuestionIndex + 1}</b> จาก <b>${questionsList.length}</b> คำถาม`;
-        } catch (error) {
-            console.error(`${logPrefix} :: ${error}`);
-        }
-    }
-
     function showCard() {
         const logPrefix = "showCard";
         try {
@@ -116,34 +127,23 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    async function preloadCards(uri) {
-        const logPrefix = "preloadCards";
+    function showQuestion(question) {
+        const logPrefix = "showQuestion";
         try {
-            let uriPrefix = "./public/";
-            let res = await fetch(uri);
-            let data = await res.json();
+            questionElement.textContent = question.question;
+            optionsElement.innerHTML = '';
+            question.options.forEach(option => {
+                const optionElement = document.createElement("div");
+                optionElement.innerHTML = `
+                <label>
+                    <input type="radio" name="option" value="${option}">
+                    ${option}
+                </label>
+            `;
+                optionsElement.appendChild(optionElement);
+            });
 
-            cardLevelsCount = data.length;
-            let cardImages = [
-                { card: cardCommonCaterPillar, uri: data[0].uri },
-                { card: cardRareCocoon, uri: data[1].uri },
-                { card: cardEliteMagicalButterfly, uri: data[2].uri },
-                { card: cardLegendaryFairyGoddess, uri: data[3].uri }
-            ];
-
-            await Promise.all(
-                cardImages.map(({ card, uri }) =>
-                    new Promise(resolve => {
-                        card.src = uriPrefix + uri;
-                        card.onload = () => resolve();
-                        card.onerror = () => resolve();
-                    })
-                ),
-
-            );
-
-            cardsCollection = cardImages;
-
+            quizieSubHeader.innerHTML = `คำถามที่ <b>${currentQuestionIndex + 1}</b> จาก <b>${questionsList.length}</b> คำถาม`;
         } catch (error) {
             console.error(`${logPrefix} :: ${error}`);
         }
