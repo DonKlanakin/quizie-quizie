@@ -6,33 +6,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const score = localStorage.getItem('quizScore');
     const totalQuestions = localStorage.getItem('totalQuestions');
     const rewardedCard = document.getElementById("card-level-summary");
+    const logPrefix = "summary";
 
     summaryResult.textContent = `คุณทำคะแนนได้: ${score} / ${totalQuestions}`;
     restartButton.addEventListener('click', () => {
         window.location.href = '../../../index.html';
     });
 
-    showCard();
+    fetch("./../../content/card-levels.json")
+        .then(res => res.json())
+        .then(data => {
+            levelsCount = Math.floor(questionsCount / cardLevelsCount);
+            level = Math.floor(score / levelsCount);
+            if (level >= 4) {
+                level = 3;
+            } else if (level >= 3) {
+                level = 2;
+            }
+            const cardUri = data[level].uri;
 
-    function showCard() {
-        fetch("./../../content/card-levels.json")
-            .then(res => res.json())
-            .then(data => {
-                levelsCount = Math.floor(questionsCount / cardLevelsCount);
-                level = Math.floor(score / levelsCount);
-                if (level >= 4) {
-                    level = 3;
-                } else if (level >= 3) {
-                    level = 2;
-                }
-                const cardUri = data[level].uri;
-                getCard(cardUri);
+            (function getCard(uri) {
+                rewardedCard.style.backgroundImage = `url(./../../${cardUri})`;
+            })();
 
-                function getCard(uri) {
-                    rewardedCard.style.backgroundImage = `url(./../../${cardUri})`;
-                };
-            }).catch(error => {
-                console.error(error.toString());
-            });
-    };
+        }).catch(error => {
+            console.error(`${logPrefix} :: ${error}`);
+        });
 });
