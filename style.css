@@ -11,33 +11,6 @@ body {
     margin: 0;
 }
 
-body::before {
-    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-fairy-goddess.svg");
-    position: absolute;
-    top: -9999rem;
-    left: -9999rem;
-    opacity: 0;
-    z-index: -1;
-}
-
-body::before {
-    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-cocoon.svg");
-    position: absolute;
-    top: -9999rem;
-    left: -9999rem;
-    opacity: 0;
-    z-index: -2;
-}
-
-body::before {
-    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-magical-butterfly.svg");
-    position: absolute;
-    top: -9999rem;
-    left: -9999rem;
-    opacity: 0;
-    z-index: -3;
-}
-
 button {
     background-color: #007BFF;
     border: none;
