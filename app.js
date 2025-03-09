@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const cards = "./public/content/card-levels.json";
-    const questions = "./public/content/questions.json";
+    const questions = "./public/content/questions-intermediate.json";
     const quizieSubHeader = document.getElementById("quizie-sub-header");
     const questionElement = document.getElementById("question");
     const optionsElement = document.getElementById("options");
