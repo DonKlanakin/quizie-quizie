@@ -17,14 +17,25 @@ body::before {
     top: -9999rem;
     left: -9999rem;
     opacity: 0;
+    z-index: -1;
 }
 
-body::after {
+body::before {
     content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-cocoon.svg");
     position: absolute;
     top: -9999rem;
     left: -9999rem;
     opacity: 0;
+    z-index: -2;
+}
+
+body::before {
+    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-magical-butterfly.svg");
+    position: absolute;
+    top: -9999rem;
+    left: -9999rem;
+    opacity: 0;
+    z-index: -3;
 }
 
 button {
@@ -77,15 +88,11 @@ h4 {
     height: 400px;
     margin: 0;
     padding: 0;
-    transition: all 200ms;
+    transition: opacity 0.5s ease-in-out;
 }
 
-#card-level::before {
-    content: url("https://donklanakin.github.io/quizie-quizie/public/images/card-magical-butterfly.svg");
-    position: absolute;
-    top: -9999rem;
-    left: -9999rem;
-    opacity: 0;
+#card-level.visible {
+    opacity: 1;
 }
 
 #card-level-summary {
