@@ -23,12 +23,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     (async function main() {
         const logPrefix = "main";
         try {
-            await preloadCards(cards);
+            await preload();
             await loadQuestions();
         } catch (error) {
             console.error(`${logPrefix} :: ${error}`);
         }
     })();
+
+    async function preload() {
+        const logPrefix = "preload";
+        try {
+            await preloadCards(cards);
+        } catch (error) {
+            console.error(`${logPrefix} :: ${error}`);
+        }
+    }
 
     async function preloadCards(uri) {
         const logPrefix = "preloadCards";
