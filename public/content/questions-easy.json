@@ -1,0 +1,187 @@
+[
+  {
+    "category": "Basic JavaScript",
+    "questions": [
+      {
+        "question": "JavaScript ใช้ทำอะไร?",
+        "options": [
+          "สร้างสไตล์ให้เว็บไซต์",
+          "ทำให้เว็บไซต์มีปฏิสัมพันธ์กับผู้ใช้",
+          "ใช้เก็บข้อมูลของเว็บไซต์"
+        ],
+        "answer": "ทำให้เว็บไซต์มีปฏิสัมพันธ์กับผู้ใช้"
+      },
+      {
+        "question": "เราจะประกาศตัวแปรใน JavaScript ได้อย่างไร?",
+        "options": [
+          "var name = 'John';",
+          "let name = 'John';",
+          "ทั้งสองวิธีข้างต้น"
+        ],
+        "answer": "ทั้งสองวิธีข้างต้น"
+      },
+      {
+        "question": "console.log ใช้ทำอะไร?",
+        "options": [
+          "แสดงผลข้อความในหน้าเว็บ",
+          "แสดงผลข้อความใน console",
+          "สร้างตัวแปร"
+        ],
+        "answer": "แสดงผลข้อความใน console"
+      },
+      {
+        "question": "ค่าของตัวแปรที่ไม่ได้กำหนดค่าให้จะเป็นอะไร?",
+        "options": [
+          "null",
+          "undefined",
+          "0"
+        ],
+        "answer": "undefined"
+      },
+      {
+        "question": "typeof operator ใช้ทำอะไร?",
+        "options": [
+          "ตรวจสอบประเภทของข้อมูล",
+          "เปลี่ยนประเภทของข้อมูล",
+          "ลบค่าของตัวแปร"
+        ],
+        "answer": "ตรวจสอบประเภทของข้อมูล"
+      },
+      {
+        "question": "ตัวดำเนินการใดใช้เปรียบเทียบค่าและประเภทของตัวแปร?",
+        "options": [
+          "==",
+          "===",
+          "!="
+        ],
+        "answer": "==="
+      },
+      {
+        "question": "โครงสร้างควบคุมใดใช้สำหรับการทำซ้ำ?",
+        "options": [
+          "if-else",
+          "for-loop",
+          "switch"
+        ],
+        "answer": "for-loop"
+      },
+      {
+        "question": "function ใน JavaScript ใช้ทำอะไร?",
+        "options": [
+          "เก็บข้อมูล",
+          "ใช้คำนวณค่าหรือทำงานซ้ำ",
+          "กำหนดสไตล์ให้หน้าเว็บ"
+        ],
+        "answer": "ใช้คำนวณค่าหรือทำงานซ้ำ"
+      },
+      {
+        "question": "วิธีเรียกใช้ function ใน JavaScript คืออะไร?",
+        "options": [
+          "function myFunction;",
+          "myFunction();",
+          "call myFunction;"
+        ],
+        "answer": "myFunction();"
+      },
+      {
+        "question": "JavaScript สามารถใช้จัดการกับ HTML ได้หรือไม่?",
+        "options": [
+          "ได้",
+          "ไม่ได้",
+          "ขึ้นอยู่กับเบราว์เซอร์"
+        ],
+        "answer": "ได้"
+      },
+      {
+        "question": "JavaScript ใช้ keyword อะไรในการประกาศ function?",
+        "options": [
+          "method",
+          "function",
+          "def"
+        ],
+        "answer": "function"
+      },
+      {
+        "question": "อะไรคือผลลัพธ์ของ 10 + '5' ใน JavaScript?",
+        "options": [
+          "15",
+          "105",
+          "Error"
+        ],
+        "answer": "105"
+      },
+      {
+        "question": "JavaScript ใช้วิธีไหนเพื่อรับค่าจากผู้ใช้?",
+        "options": [
+          "alert()",
+          "prompt()",
+          "console.log()"
+        ],
+        "answer": "prompt()"
+      },
+      {
+        "question": "ตัวแปรที่กำหนดด้วย const สามารถเปลี่ยนค่าได้หรือไม่?",
+        "options": [
+          "ได้",
+          "ไม่ได้",
+          "ขึ้นอยู่กับเงื่อนไข"
+        ],
+        "answer": "ไม่ได้"
+      },
+      {
+        "question": "เงื่อนไขใดใช้ตรวจสอบว่า x มีค่ามากกว่า 10?",
+        "options": [
+          "if x > 10",
+          "if (x > 10) {}",
+          "if x => 10"
+        ],
+        "answer": "if (x > 10) {}"
+      },
+      {
+        "question": "JavaScript เป็นภาษาที่ใช้ทำงานฝั่งไหน?",
+        "options": [
+          "Front-end",
+          "Back-end",
+          "ทั้งสองอย่าง"
+        ],
+        "answer": "ทั้งสองอย่าง"
+      },
+      {
+        "question": "Array ใน JavaScript ใช้ทำอะไร?",
+        "options": [
+          "เก็บค่าหลายค่าภายในตัวแปรเดียว",
+          "คำนวณค่าทางคณิตศาสตร์",
+          "แสดงผลใน console"
+        ],
+        "answer": "เก็บค่าหลายค่าภายในตัวแปรเดียว"
+      },
+      {
+        "question": "เราจะเข้าถึงค่าตัวแรกใน Array ได้อย่างไร?",
+        "options": [
+          "array[0]",
+          "array(0)",
+          "array.first"
+        ],
+        "answer": "array[0]"
+      },
+      {
+        "question": "ฟังก์ชัน setTimeout() ใช้ทำอะไร?",
+        "options": [
+          "ทำให้โค้ดทำงานทันที",
+          "ทำให้โค้ดทำงานหลังจากเวลาที่กำหนด",
+          "หยุดการทำงานของ JavaScript"
+        ],
+        "answer": "ทำให้โค้ดทำงานหลังจากเวลาที่กำหนด"
+      },
+      {
+        "question": "ตัวดำเนินการใดใช้สำหรับรวม string?",
+        "options": [
+          "+",
+          "&",
+          "concat()"
+        ],
+        "answer": "+"
+      }
+    ]
+  }
+]

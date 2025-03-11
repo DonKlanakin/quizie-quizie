@@ -1,0 +1,187 @@
+[
+  {
+    "category": "CSS Selectors and DOM Manipulation",
+    "questions": [
+      {
+        "question": "CSS selector ใดใช้เลือก element ที่เป็น child ตัวแรกของ parent?",
+        "options": [
+          ":first-child",
+          ":nth-child(1)",
+          "first-of-type"
+        ],
+        "answer": ":first-child"
+      },
+      {
+        "question": "CSS selector 'div > p' ใช้เลือกอะไร?",
+        "options": [
+          "เลือก <strong>p</strong> ทุกตัวใน <strong>div</strong>",
+          "เลือกเฉพาะ <strong>p</strong> ที่เป็นลูกของ <strong>div</strong> นั้น",
+          "เลือกเฉพาะ <strong>p</strong> ตัวแรกที่อยู่ในแต่ละ <strong>div</strong>"
+        ],
+        "answer": "เลือกเฉพาะ <strong>p</strong> ที่เป็นลูกของ <strong>div</strong> นั้น"
+      },
+      {
+        "question": "เราจะเลือก element ที่มี class 'box' และ 'shadow' พร้อม ๆ กันได้อย่างไร?",
+        "options": [
+          ".box.shadow",
+          "box, shadow",
+          "box.shadow()"
+        ],
+        "answer": ".box.shadow"
+      },
+      {
+        "question": "Selector ใดใช้กำหนดสไตล์ให้บรรทัดแรกของ paragraph?",
+        "options": [
+          ":first-line",
+          "::line-first",
+          "::first-letter"
+        ],
+        "answer": ":first-line"
+      },
+      {
+        "question": "document.querySelectorAll(\".card\") ส่งคืนค่าอะไร?",
+        "options": [
+          "A single element",
+          "A NodeList",
+          "An array of elements"
+        ],
+        "answer": "A NodeList"
+      },
+      {
+        "question": "Method ใดใช้สำหรับแทรก element เข้าไปเป็นตัวแรกก่อน element ตัวอื่น ๆ ใน DOM?",
+        "options": [
+          "insertBefore()",
+          "appendChild()",
+          "prepend()"
+        ],
+        "answer": "insertBefore()"
+      },
+      {
+        "question": "เราจะเพิ่ม class 'active' ให้ element ใน JavaScript ได้อย่างไร?",
+        "options": [
+          "element.addClass('active');",
+          "element.classList.add('active');",
+          "element.className += ' active';"
+        ],
+        "answer": "element.classList.add('active');"
+      },
+      {
+        "question": "Pseudo-class ใดใช้เลือก child ตัวสุดท้ายของ element?",
+        "options": [
+          ":last-child",
+          "::last",
+          "last-of-type"
+        ],
+        "answer": ":last-child"
+      },
+      {
+        "question": "Method ใดใช้ลบ element ออกจาก DOM?",
+        "options": [
+          "element.remove()",
+          "element.delete()",
+          "element.removeChild()"
+        ],
+        "answer": "element.remove()"
+      },
+      {
+        "question": "display: none; มีผลอะไรกับ element?",
+        "options": [
+          "ซ่อน element แต่ขนาดยังมีผลต่อ layout",
+          "ลบ element นั้นออกไปจาก layout",
+          "ลดค่า opacity เพื่อให้ element หายไป"
+        ],
+        "answer": "ลบ element นั้นออกไปจาก layout"
+      },
+      {
+        "question": "CSS property ใดทำให้ element ซ้อนทับกันได้?",
+        "options": [
+          "z-index",
+          "position",
+          "opacity"
+        ],
+        "answer": "z-index"
+      },
+      {
+        "question": "document.createElement(\"div\") ใช้ทำอะไร?",
+        "options": [
+          "สร้าง <strong>div</strong> ใหม่",
+          "ค้นหา <strong>div</strong>",
+          "ลบ <strong>div</strong>"
+        ],
+        "answer": "สร้าง <strong>div</strong> ใหม่"
+      },
+      {
+        "question": "CSS selector ใดใช้เลือก element โดยค้นหาด้วย keyword ใน class attribute?",
+        "options": [
+          "[class*='keyword']",
+          "[class^='keyword']",
+          "[class$='keyword']"
+        ],
+        "answer": "[class*='keyword']"
+      },
+      {
+        "question": "Event ใดเกิดขึ้นเมื่อ element ได้รับ focus?",
+        "options": [
+          "focus",
+          "click",
+          "mouseenter"
+        ],
+        "answer": "focus"
+      },
+      {
+        "question": "Method ใดใช้สร้าง clone ของ element ใน DOM?",
+        "options": [
+          "cloneNode()",
+          "copyNode()",
+          "duplicate()"
+        ],
+        "answer": "cloneNode()"
+      },
+      {
+        "question": "':nth-child(odd)' ใช้เลือกอะไร?",
+        "options": [
+          "child ตัวแรกเท่านั้น",
+          "children ที่เป็นเลขคี่",
+          "children ที่เป็นเลขคู่"
+        ],
+        "answer": "children ที่เป็นเลขคี่"
+      },
+      {
+        "question": "CSS property ใดใช้ซ่อน element โดยไม่กระทบ layout?",
+        "options": [
+          "display",
+          "visibility",
+          "opacity"
+        ],
+        "answer": "visibility"
+      },
+      {
+        "question": "CSS selector ใดใช้เลือก element เมื่อ hover?",
+        "options": [
+          ":hover",
+          ":focus",
+          "::hover"
+        ],
+        "answer": ":hover"
+      },
+      {
+        "question": "Method ใดคืนค่า element แรกที่ค้นพบใน DOM?",
+        "options": [
+          "querySelector()",
+          "getElementById()",
+          "querySelectorAll()"
+        ],
+        "answer": "querySelector()"
+      },
+      {
+        "question": "CSS property ใดใช้กำหนดระยะห่างระหว่างขอบของ element และเนื้อหา (content)?",
+        "options": [
+          "margin",
+          "padding",
+          "border-spacing"
+        ],
+        "answer": "padding"
+      }
+    ]
+  }
+]
