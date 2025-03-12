@@ -142,8 +142,13 @@ h4 {
 
 #start-screen {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #F1F0F4;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 24px 40px 64px 40px;
     opacity: 1;
     transition: all 0.5s ease-in-out;
 }
@@ -206,10 +211,6 @@ h4 {
     flex-direction: row;
     align-items: center;
     gap: 16px;
-    background-color: #F1F0F4;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     margin: 0;
 }
 
@@ -219,4 +220,12 @@ h4 {
 
 .mt-s {
     margin-top: 20px;
+}
+
+.mb-s {
+    margin-bottom: 20px;
+}
+
+.mb-0 {
+    margin-bottom: 0px;
 }
