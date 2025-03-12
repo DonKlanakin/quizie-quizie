@@ -87,7 +87,7 @@ async function preloadCards(uri) {
         });
 
         cardExpert.addEventListener("click", () => {
-            questions = "./public/content/questions-Expert.json";
+            questions = "./public/content/questions-expert.json";
             processTransition(SCREENS.MAIN);
         });
 
