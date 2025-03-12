@@ -166,6 +166,12 @@ h4 {
     margin-bottom: 8px;
 }
 
+#summary-screen {
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
 .buttons-container {
     align-self: flex-end;
 }

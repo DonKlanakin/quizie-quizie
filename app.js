@@ -1,6 +1,7 @@
 const cards = "./public/content/card-levels.json";
 const startScreen = document.getElementById("start-screen");
 const mainScreen = document.getElementById("main-screen");
+const summaryScreen = document.getElementById("summary-screen");
 const quizieSubHeader = document.getElementById("quizie-sub-header");
 const questionElement = document.getElementById("question");
 const optionsElement = document.getElementById("options");
@@ -22,6 +23,12 @@ let cardsCollection = [];
 let questionsCount = 0;
 let questionsList = [];
 let rewardedCardUri = 0;
+
+const SCREENS = Object.freeze({
+    START: "START",
+    MAIN: "MAIN",
+    SUMMARY: "SUMMARY"
+});
 
 (async function main() {
     const logPrefix = "main";
@@ -71,28 +78,18 @@ async function preloadCards(uri) {
 
         cardBeginer.addEventListener("click", () => {
             questions = "./public/content/questions-beginner.json";
-            processTransition();
+            processTransition(SCREENS.MAIN);
         });
 
         cardIntermediate.addEventListener("click", () => {
             questions = "./public/content/questions-intermediate.json";
-            processTransition();
+            processTransition(SCREENS.MAIN);
         });
 
         cardExpert.addEventListener("click", () => {
             questions = "./public/content/questions-Expert.json";
-            processTransition();
+            processTransition(SCREENS.MAIN);
         });
-
-        function processTransition() {
-            startScreen.style.display = "none";
-            mainScreen.style.display = "flex";
-            setTimeout(() => {
-                mainScreen.style.opacity = "1";
-            }, 200);
-
-            loadQuestions();
-        }
 
     } catch (error) {
         console.error(`${logPrefix} :: ${error}`);
@@ -126,6 +123,7 @@ async function loadQuestions() {
                     localStorage.setItem("quizScore", score);
                     localStorage.setItem("totalQuestions", questionsList.length);
                     window.location.href = "./public/pages/summary/summary.html";
+                    //processTransition(SCREENS.SUMMARY);
                 }
             }
         });
@@ -193,3 +191,53 @@ function showQuestion(question) {
         console.error(`${logPrefix} :: ${error}`);
     }
 }
+
+function processTransition(screen) {
+    switch (screen) {
+        case SCREENS.START:
+            processResetGame();
+            startScreen.style.display = "flex";
+            mainScreen.style.display = "none";
+            summaryScreen.style.display = "none"
+            setTimeout(() => {
+                startScreen.style.opacity = "1";
+            }, 200);
+            loadQuestions();
+            break;
+        case SCREENS.MAIN:
+            startScreen.style.display = "none";
+            mainScreen.style.display = "flex";
+            summaryScreen.style.display = "none"
+            setTimeout(() => {
+                mainScreen.style.opacity = "1";
+            }, 200);
+            loadQuestions();
+            break;
+        case SCREENS.SUMMARY:
+            startScreen.style.display = "none";
+            mainScreen.style.display = "none";
+            summaryScreen.style.display = "flex"
+            setTimeout(() => {
+                summaryScreen.style.opacity = "1";
+            }, 200);
+            break;
+    
+        default:
+            break;
+    }
+}
+
+// function processResetGame(params) {
+//     questions = "";
+//     currentQuestionIndex = 0;
+//     score = 0;
+//     level = 0;
+//     cardsCollection = [];
+//     questionsCount = 0;
+//     questionsList = [];
+//     rewardedCardUri = 0;
+//     startScreen.style.opacity = "1";
+//     mainScreen.style.opacity = "0";
+//     summaryScreen.style.opacity = "0"
+// }
+
