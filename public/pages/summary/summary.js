@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const questionsCount = localStorage.getItem("questionsCount");
     const cardLevelsCount = localStorage.getItem("cardLevelsCount");
+    const rewardedCardUri = localStorage.getItem("rewardedCardUri");
     const summaryResult = document.getElementById('summary-result');
     const restartButton = document.getElementById('restart-button');
     const score = localStorage.getItem('quizScore');
@@ -18,14 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             levelsCount = Math.floor(questionsCount / cardLevelsCount);
             level = Math.floor(score / levelsCount);
-            if (level >= 4) {
-                level = 3;
-            } else if (level >= 3) {
-                level = 2;
+            if (score === questionsCount) {
+                level = cardLevelsCount;
+            } else if (level >= cardLevelsCount) {
+                level = cardLevelsCount - 1;
             }
             const cardUri = data[level].uri;
 
-            (function getCard(uri) {
+            (function getCard() {
                 rewardedCard.style.backgroundImage = `url(./../../${cardUri})`;
             })();
 

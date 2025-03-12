@@ -21,6 +21,7 @@ let level = 0;
 let cardsCollection = [];
 let questionsCount = 0;
 let questionsList = [];
+let rewardedCardUri = 0;
 
 (async function main() {
     const logPrefix = "main";
@@ -145,18 +146,20 @@ function showCard() {
     const logPrefix = "showCard";
     try {
         // Exclude legendary card from distribution
-        const numCardLevels = cardsCollection.length - 1;
-        const levelThreshold = Math.floor(questionsCount / numCardLevels);
+        const cardLevelsCount = cardsCollection.length - 1;
+        const levelThreshold = Math.floor(questionsCount / cardLevelsCount);
         level = Math.floor(score / levelThreshold);
 
         // Ensure the last card is "Legendary Fairy Goddess" and only given to a full-scored player
         if (score === questionsCount) {
-            level = numCardLevels;
-        } else if (level >= numCardLevels) {
-            level = numCardLevels - 1;
+            level = cardLevelsCount;
+        } else if (level >= cardLevelsCount) {
+            level = cardLevelsCount - 1;
         }
 
-        localStorage.setItem("cardLevelsCount", numCardLevels);
+        localStorage.setItem("cardLevelsCount", cardLevelsCount);
+        localStorage.setItem("rewardedCardUri", level);
+
         setCard(level);
 
         function setCard(level) {
